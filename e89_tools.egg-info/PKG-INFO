@@ -12,7 +12,7 @@ Description: ===================================================================
         
         ===================================================================================================================================================================================
         
-        O plugin E89 - TOOLS disponibiliza algumas ferramentas para o desenvolvimento
+        O plugin E89 - TOOLS disponibiliza algumas ferramentas para o desenvolvimento django.
         
         ===================================================================================================================================================================================
         
@@ -122,7 +122,6 @@ Description: ===================================================================
         	EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
         	--------------------------------------------------------------------------------
         	Opções necessárias para envio de e-mail. Olhar https://docs.djangoproject.com/en/dev/ref/settings/#email-host
-        
         
         
 Platform: UNKNOWN

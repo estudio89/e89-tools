@@ -9,6 +9,7 @@ from django.conf import settings
 from dateutil import parser
 from sys import getsizeof
 import sys
+import re
 from itertools import chain
 from collections import deque
 from PIL import Image, ImageFilter
@@ -20,6 +21,10 @@ except ImportError:
     pass
 
 import os,json,sys
+
+def camelcase_underscore(name):
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
 
 def print_console(msg):
     try:

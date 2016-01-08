@@ -32,6 +32,20 @@ def print_console(msg):
     except UnicodeError:
         pass
 
+def format_iso_date(date):
+    date = date.isoformat()
+    if date.endswith('+00:00'):
+        date = date[:-6] + 'Z'
+    return date
+
+def dash_camelcase(value):
+    components = value.split('-')
+    return "".join(x.title() for x in components)
+
+def camelcase_dash(value):
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', value)
+    return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
+
 def deepgetattr(obj, attr):
     """Recurses through an attribute chain to get the ultimate value."""
     return reduce(getattr, attr.split('__'), obj)
